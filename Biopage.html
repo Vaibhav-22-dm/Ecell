@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav_Mohite.com</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1vw;
+           
+            
+
+        }
+
+        body{
+            background: rgb(37, 37, 37);
+            overflow-x: hidden;
+        }
+        #navbar{
+            display: flex;
+            position: fixed;
+            right: 2vw;
+            top: 20px;
+            background: black;
+            width: 8vw;
+            height: fit-content;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        ul li{
+            color: white;
+            padding:  2vw 0vw;
+            width: 122.875px;
+            text-align: center;
+            
+        }
+
+        #home{
+            background: rgb(252, 186, 3);
+            width: 8vw;
+            
+        }
+
+        .navitem:hover{
+            color: black;
+            background: rgb(252, 186, 3);
+            cursor: pointer;
+            width: 8vw;
+        }
+
+        #profile{
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            left: 22.6vw;
+            top: 20px;
+            background: #040203;
+            height: 600px;
+            width: 65vw;   
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+     
+        }
+
+            
+
+        #descript{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            top: 20px;
+            left: 16px;
+            height: 1350px;
+            width: 20vw;
+            float: left;
+            background: black;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        }
+
+        #specs{
+            display: flex;
+            position: relative;
+            left: 22.6vw;
+            height: fit-content;
+            width: 65vw;  
+            top: 20px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 30px 20px 0px 20px;
+            
+        
+        
+        }
+
+        .skills{
+            height: 260px;
+            width: 290px;
+            color: yellow;
+            background: #737272;
+            margin-bottom: 30px;
+            padding: 1vw;
+            
+
+        }
+
+
+
+        footer{
+            display: flex;
+            margin-top: 30px;
+            background: black;
+            width: 100vw;
+            height: 40px;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            z-index: 1;
+            position: absolute;
+            font-size: 4vw;
+            margin-left: 24vw;
+            margin-bottom: 10px;
+        }
+
+
+        #mainbtn{
+            padding: 1vw;
+            border: none;
+            color: black;
+            background: rgb(252, 186, 3);
+            z-index: 1;
+            position: absolute;
+            top: 437px;
+            left: 24vw;
+            border-radius: 30px;
+            font-size: 1vw;
+        }
+
+        #mainbtn:hover{
+            border: 2px solid rgb(252, 186, 3);
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        section p{
+            z-index: 1;
+            position: absolute;
+            width: 36vw;
+            margin-left: 19.5vw;
+            margin-top: 185px;
+            color: white;
+            font-size: 1vw;
+        }
+
+        #detail{
+            display: flex;
+            position: relative;
+            left: 22.6vw;
+            width: 65vw;  
+            top: 25px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0.8vw;
+            margin-top: 10px;
+
+        }
+
+        .data{
+            color: white;
+            font-size: 1vw;
+
+        }
+
+        .skills p{
+            color: white;
+            font-size: 1vw;
+        }
+
+        .skills h3{
+            color: rgb(252, 186, 3);
+            font-size: 1.1vw;
+        }
+
+        #descript img{
+            margin: 2vw;
+            border-radius: 50%;
+        }
+
+        #descript h2{
+            color: white;
+            font-size: 1.8vw;
+
+        }
+
+        #descript h3{
+            color: white;
+            font-size: 1.8vw;
+
+        }
+
+    
+        hr{
+            width: 5vw;
+            height: 1vw;
+            border-bottom: 10px dotted rgb(252, 186, 3);
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            margin-top: 20px;
+        }
+
+        footer p{
+            color: white;
+            font-size: 1vw;
+        }
+
+        table{
+            border: none;
+            margin-top: 20px;
+        }
+
+        td{
+            color: white;
+            padding: 0.6vw;
+            font-size: 1vw;
+        }
+
+        #scale{
+            margin-top: 8px;
+            margin-bottom: 4px;
+            width: 10vw;
+            background: lightgrey;
+            height: 7px;
+
+        }
+
+        #level1{
+            width: 7vw;
+            background: red;
+            height: 7px;
+         
+        }
+
+        #level2{
+            width: 9vw;
+            background: red;
+            height: 7px;
+        
+        }
+
+        #level3{
+            width: 7vw;
+            background: red;
+            height: 7px;
+            
+        }
+
+        #head2{
+            margin-top: 20px;
+            font-size: 1.3vw;
+            text-align: left;
+            display: block;
+        }
+
+        #linguistics{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0px;
+            width: 15vw;
+        }
+
+        .lang{
+            margin-top: 8px;
+            color: lightgrey;
+            display: inline;
+            
+        }
+
+        #head3{
+            margin-top: 20px;
+            font-size: 1.3vw;
+            text-align: left;
+            display: block;
+        }
+
+        #tech{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0px;
+            width: 15vw;
+            height: 172px;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+
+
+        .code{
+            color: lightgrey;
+            margin-top: 8px;
+        }
+
+        .box{
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            width: 9vw;
+            height: 5px;
+            justify-content: space-between;
+        }
+
+        .boxes{
+            height: 15px;
+            width: 15px;
+            border: 1px solid white;
+            background: red;
+    
+        }
+
+        #box2 .boxes:nth-child(4), #box2 .boxes:nth-child(5){
+            background: none;
+        }
+
+        #box3 .boxes:nth-child(4), #box3 .boxes:nth-child(5){
+            background: none;
+        }
+
+        #box1 .boxes:nth-child(5){
+            background: none;
+        }
+
+        #hobby{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0px;
+            width: 15vw;
+            height: 70px;
+            justify-content: space-between;
+        }
+
+        .interest{
+            color: white;
+            font-size: 1vw;
+            background: none;
+            padding: 0.7vw 0vw;
+            text-align: left;
+        }
+
+        #head4{
+            margin-top: 20px;
+            text-align: left;
+            font-size: 1.3vw;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 1vw;
+        }
+
+        a:active{
+            color: black;
+            background: rgb(252, 186, 3);
+        }
+
+        #contact{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 35vw;
+            padding: 10px;
+        }
+
+        label{
+            color: white;
+            padding: 10px 0px;
+            font-size: 1vw;
+        }
+
+        #name, #email, #message{
+            width: 30vw;
+            border: none;
+            border-bottom: 2px solid rgb(252, 186, 3);
+            background: transparent;
+            color: white;
+            padding: 0.6vw 0vw;
+        }
+
+        #name:focus, #email:focus, #message:focus{
+            outline: none;
+            border-bottom: 2px solid red;
+        }
+
+        #formhead{
+            color: rgb(252, 186, 3);
+            font-size: 2vw;
+        }
+
+        input[type=submit]{
+            width: 7vw;
+            color: black;
+            background: rgb(252, 186, 3);
+            padding: 0.8vw;
+            margin: 16px 0px;
+            border: none;
+            border-radius: 30px;
+            text-align: center;
+            
+        }
+
+        input[type=submit]:hover{
+            background: transparent;
+            border: 2px solid rgb(252, 186, 3);
+            color: white;
+        }
+
+        #social{
+            display: flex;
+            flex-direction: column;
+            margin-top: 7px;
+            width: 25vw;
+            
+        }
+
+        #social h2{
+            color: rgb(252, 186, 3);
+            font-size: 2vw;
+        }
+
+        #social ul li{
+            margin: 5px 0px;
+            padding: 4px 0px;
+            text-align: left;
+            font-size: 1vw;
+        }
+
+        #social p{
+            color: white;
+            margin-top: 10px;
+            font-size: 1vw;
+        }
+
+        #address{
+            margin-top: 20px;
+        }
+
+        #connect{
+            display: flex;
+            position: relative;
+            top: 25px;
+            left: 25vw;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 80vw;
+
+        }
+
+        #profile img{
+            margin-right: 35vw;
+        }
+
+        @media(max-width: 411px){
+            #connect{
+                flex-direction: column;
+            }
+        }
+
+        
+
+        
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <nav id="navbar">
+        <ul>
+            <li class="navitem" id="home" onclick="home()"><a href="#profile">Home</a></li>
+            <li class="navitem" onclick="about()" id="about">About</li>
+            <li class="navitem"><a href="#specs">Portfolios</a></li>
+            <li class="navitem"><a href="#contact">Contact</a></li>
+            <li class="navitem" onclick="lightmode()" id="light"><a>Light Mode</a></li>
+        </ul>
+
+    </nav>
+    <section id="profile">
+        <img src="C:/Users/lenovo/Downloads/IMG_20201203_072910002.jpg" alt="no image found" width="470px" height="600px">
+        <h1 id="myhead">Discover My Amazing Art Space!</h1>
+        <p id="myintro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, quaerat error nobis corrupti in unde odio temporibus explicabo? Expedita aliquam accusamus velit tempore quis dicta eum possimus rem quas? Sapiente.</p>
+        <button id="mainbtn">Explore More</button>
+
+    </section>
+    <section id="detail">
+    <div class="data">
+        <h2 style="font-size: 1.3vw;"><span style="color: rgb(252, 186, 3); font-size: 2vw;">2+</span> Years Experience</h2>
+    </div>
+    <div class="data">
+        <h2 style="font-size: 1.3vw;"><span style="color: rgb(252, 186, 3); font-size: 2vw;">10+</span> Projects</h2>
+    </div>
+    <div class="data">
+        <h2 style="font-size: 1.3vw;"><span style="color: rgb(252, 186, 3); font-size: 2vw;">5+</span> Collabs</h2>
+    </div>
+    <div class="data">
+        <h2 style="font-size: 1.3vw;"><span style="color: rgb(252, 186, 3); font-size: 2vw;">4+</span> Honors & Awards</h2>
+    </div>
+    </section>
+    <article id="specs">
+        <div class="skills">
+            <h3>WEB DEV</h3><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, amet corrupti. Soluta ea deserunt dolorem quod natus minus sit quo doloribus ullam, labore maxime optio ut rerum nulla adipisci eaque.</p>
+        </div>
+        <div class="skills">
+            <h3>UI/UX</h3><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, amet corrupti. Soluta ea deserunt dolorem quod natus minus sit quo doloribus ullam, labore maxime optio ut rerum nulla adipisci eaque.</p>
+        </div>
+        <div class="skills">
+            <h3>VIDEO EDITING</h3><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, amet corrupti. Soluta ea deserunt dolorem quod natus minus sit quo doloribus ullam, labore maxime optio ut rerum nulla adipisci eaque.</p>
+        </div>
+        <div class="skills">
+            <h3>ANIMATION</h3><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, amet corrupti. Soluta ea deserunt dolorem quod natus minus sit quo doloribus ullam, labore maxime optio ut rerum nulla adipisci eaque.</p>
+        </div>
+        <div class="skills">
+            <h3>APP DEV</h3><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, amet corrupti. Soluta ea deserunt dolorem quod natus minus sit quo doloribus ullam, labore maxime optio ut rerum nulla adipisci eaque.</p>
+        </div>
+        <div class="skills">
+            <h3>MS OFFICE</h3><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, amet corrupti. Soluta ea deserunt dolorem quod natus minus sit quo doloribus ullam, labore maxime optio ut rerum nulla adipisci eaque.</p>
+        </div>
+        
+
+    </article>
+    <aside id="descript">
+        <img src="C:/Users/lenovo/Downloads/20210223_075812 (1).jpg" alt="no image found" width="120vw" height="130vw">
+        <h2>Full-Stack Developer</h2>
+        <h3>E-Cell, IIT Kharagpur</h3>
+        <hr>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>Vaibhav Mohite</td>
+            </tr>
+            <tr>
+                <td>Location:</td>
+                <td>Nashik, India</td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td>18 yrs</td>
+            </tr>
+            <tr>
+                <td>Institute:</td>
+                <td>IIT Kharagpur</td>
+            </tr>
+            <tr>
+                <td>Qualification:</td>
+                <td>F.Y. Mech. Engg.</td>
+            </tr>
+            
+        </table>
+        <hr>
+
+        <h2 id="head2">Language Proficiency </h2>
+        <div id="linguistics">
+        <p class="lang">English</p>
+        <div id="scale">
+            <div id="level1"></div>
+        </div>
+        
+        <p class="lang">Marathi  </p>
+        <div id="scale">
+            <div id="level2"></div>
+        </div>
+      
+        <p class="lang">Hindi</p>
+        <div id="scale">
+            <div id="level3"></div>
+        </div>
+      
+        </div>
+        <hr>
+
+        <h2 id="head3">Technology Expertise</h2>
+
+        <div id="tech">
+            <p class="code">HTML, CSS, JS</p>
+            <div class="box" id="box1">
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
+            <p class="code">MS PowerPoint</p>
+            <div class="box" id="box2">
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
+            <p class="code">MS Excel</p>
+            <div class="box" id="box3">
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
+        </div>
+        <hr>
+
+        <h3 id="head4">Hobbies</h3>
+
+        <div id="hobby">
+            <ul>
+                <li class="interest">Playing Football</li>
+                <li class="interest">Sketching</li>
+                <li class="interest">Reading Books</li>
+                <li class="interest">Cycling</li>
+                <li class="interest">Trekking</li>
+            </ul>
+        </div>
+        
+       
+        
+    </aside>
+
+    <div id="connect">
+
+    <form action="" id="contact">
+        <h2 id="formhead">Contact Form</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="type your name">
+        <label for="email">Email</label>
+        <input type="text" id="email"placeholder="xyz@gmail.com">
+        <label for="message">Message</label>
+        <input type="text-area" id="message" placeholder="Type your message here.">
+        <input type="submit" value="Send">
+    </form>
+
+    <div id="social">
+        <h2>Social Media</h2>
+        <ul>
+            <li><a href="">facebook</a></li>
+            <li><a href="">instagram</a></li>
+            <li><a href="">youtube</a></li>
+            <li><a href="">twitter</a></li>
+        </ul>
+        <h2 id="address">Residential Address</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quam ipsam odit qui expedit.</p>
+        
+    </div>
+    </div>
+    <footer id="foot">
+      <p>&copy; All Rights Reserved, 2021</p>
+    </footer>
+    </div>
+</body>
+<script>
+    function about(){
+        document.getElementById("myhead").innerHTML="Hello! I am Vaibhav Mohite."
+        document.getElementById("myintro").innerHTML="I am a UG Fresher at IIT Kharagpur from Mechanical Department. I am a GES Intern at Entrepreneurship Cell, IIT Kharagpur.";
+        document.getElementById("about").style.background="rgb(252, 186, 3)";
+        document.getElementById("about").style.color="black";
+        document.getElementById("home").style.background="black";
+        document.getElementById("home").style.color="white"
+        
+        }
+
+        function home(){
+            document.getElementById("myhead").innerHTML="Discover My Amazing Art Space!";
+            document.getElementById("myintro").innerHTML="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, quaerat error nobis corrupti in unde odio temporibus explicabo? Expedita aliquam accusamus velit tempore quis dicta eum possimus rem quas? Sapiente.";
+            document.getElementById("home").style.background="rgb(252, 186, 3)";
+            document.getElementById("home").style.color="black";
+            document.getElementById("about").style.background="black";
+            document.getElementById("about").style.color="white"
+
+        }
+
+    function lightmode(){
+        console.log(1)
+        document.body.style.background="lightblue"
+        doument.getElementById("profile").style.background="lightgreen";
+        doument.getElementById("descript").style.background="lightblue";
+        document.getElementById("navbar").style.background="darkblue";
+        doument.getElementById("foot").style.background="darkblue";
+        document.getElementById("light").style.background="rgb(252, 186, 3)"
+    }
+</script>
+</html>
