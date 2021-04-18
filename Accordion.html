@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: rgb(250, 243, 234);
+    }
+
+    h1 {
+        width: 500px;
+        font-size: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        color: rgb(245, 99, 31);
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .container {
+        max-width: 500px;
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-top: 100px;
+    }
+
+    .box {
+        width: 100%;
+        background: coral;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 4px 12px rgb(129, 126, 126);
+    }
+
+    .question-box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 20%;
+    }
+
+    h2 {
+        width: 88%;
+        background: burlywood;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: cornsilk;
+
+    }
+
+    .openIcon {
+        width: 12%;
+        background: cadetblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vertical{
+        
+        width: 4px;
+        height: 19px;
+        background: white;
+
+    }
+
+    .horizontal{
+        position: relative;
+        top: -12px;
+        height: 4px;
+        width: 19px;
+        background: white;
+    }
+
+    .answer-box {
+        width: 100%;
+        padding: 10px;
+        background: rgb(238, 178, 100);
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+    }
+
+    .animate{
+        animation: plus 0.5s ease-in forwards;
+    }
+    @keyframes plus {
+        from{
+            transform: rotateZ(0deg);
+            opacity: 1;
+        }
+        to{
+            transform: rotateZ(270deg);
+            opacity: 0;
+        }
+        
+    }
+</style>
+<script>
+
+    $(document).ready(function () {
+        $(".answer-box").hide();
+        $(".openIcon").click(function () {
+            $(this).parentsUntil(".container").siblings().find(".answer-box").slideUp();
+            $(this).parentsUntil(".container").siblings().find(".question-box").find(".openIcon").find(".vertical").removeClass("animate")
+            $(this).parent().next().slideToggle();
+            $(this).find(".vertical").toggleClass("animate");
+        });
+    });
+</script>
+
+<body>
+    <h1>FAQs</h1>
+    <div class="container">
+        <div class="box" id="box1">
+            <div class="question-box">
+                <h2>Q. What is "Special Theory Of Relativity"?</h2>
+                <div class="openIcon">
+                    <div class="vertical"></div>
+                    <div class="horizontal"></div>
+                </div>
+            </div>
+            <div class="answer-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, eum quis.
+                Repellendus iure veniam dolore vel reiciendis hic ipsam porro, maxime dignissimos commodi corporis
+                tempore enim exercitationem cupiditate blanditiis deserunt.</div>
+        </div>
+        <div class="box" id="box2">
+            <div class="question-box">
+                <h2>Q. What is Polarization of light?</h2>
+                <div class="openIcon">
+                    <div class="vertical"></div>
+                    <div class="horizontal"></div>
+                </div>
+            </div>
+            <div class="answer-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quo temporibus cumque
+                numquam possimus maiores necessitatibus debitis, quam labore adipisci voluptatibus voluptate repellat
+                nostrum minus ratione eum facilis suscipit? Qui.</div>
+        </div>
+        <div class="box" id="box3">
+            <div class="question-box">
+                <h2>Q. How do Newton's rings form?</h2>
+                <div class="openIcon">
+                    <div class="vertical"></div>
+                    <div class="horizontal"></div>
+                </div>
+            </div>
+            <div class="answer-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam non accusantium
+                delectus odio illum praesentium voluptas recusandae dolorum ipsa, rem cupiditate nam eos fuga id facere
+                neque molestiae ab laboriosam.</div>
+        </div>
+        <div class="box" id="box4">
+            <div class="question-box">
+                <h2>Q. Explain Fleming's left hand rule?</h2>
+                <div class="openIcon">
+                    <div class="vertical"></div>
+                    <div class="horizontal"></div>
+                </div>
+            </div>
+            <div class="answer-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam non accusantium
+                delectus odio illum praesentium voluptas recusandae dolorum ipsa, rem cupiditate nam eos fuga id facere
+                neque molestiae ab laboriosam.</div>
+        </div>
+        <div class="box" id="box5">
+            <div class="question-box">
+                <h2>Q. What are coupled Oscillators?</h2>
+                <div class="openIcon">
+                    <div class="vertical"></div>
+                    <div class="horizontal"></div>
+                </div>
+            </div>
+            <div class="answer-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam non accusantium
+                delectus odio illum praesentium voluptas recusandae dolorum ipsa, rem cupiditate nam eos fuga id facere
+                neque molestiae ab laboriosam.</div>
+        </div>
+    </div>
+</body>
+
+</html>
